@@ -1,0 +1,28 @@
+[package]
+name = "backend"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+axum = { version = "0.7", features = ["macros"] }
+tokio = { version = "1.0", features = ["full"] }
+tower-http = { version = "0.5", features = ["fs", "cors", "trace"] }
+surrealdb = { version = "2.0", features = ["kv-mem"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+shared = { path = "../shared" }
+dioxus = { version = "0.6", features = ["fullstack", "server"] }
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+tower = "0.4"
+jsonwebtoken = "9.0"
+bcrypt = "0.15"
+tower-sessions = "0.12"
+async-trait = "0.1"
+axum-extra = { version = "0.9", features = ["typed-header"] }
+mime = "0.3"
+hyper = "1.0"
+multipart = "0.18"
+axum_typed_multipart = "0.11"
+uuid = { version = "1.0", features = ["v4"] }
+frontend = { path = "../frontend", features = ["server"] }
