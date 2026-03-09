@@ -1,0 +1,24 @@
+[package]
+name = "headless-cms"
+description = "A headless CMS built with Dioxus, Axum, and SurrealDB"
+bundle_identifier = "com.example.headless-cms"
+bundle_name = "headless-cms"
+executable_name = "headless-cms"
+
+[platform.web]
+index_html = "index.html"
+asset_dir = "public"
+
+[platform.desktop]
+asset_dir = "public"
+
+[bundle]
+identifier = "com.example.headless-cms"
+publisher = "headless-cms"
+icon = ["public/favicon.ico"]
+resources = ["public"]
+
+[build]
+# Dioxus uses the server as the main entry point for fullstack apps
+server_entry = "backend"
+frontend_entry = "frontend"
